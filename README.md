@@ -19,4 +19,4 @@ Projekt przedstawia dynamiczną aplikację internetową służącą do generowan
 ##  Jak uruchomić projekt?
 1. Sklonuj repozytorium:
    ```bash
-   git clone [https://github.com/rokrajder/strona-z-memami.git](https://github.com/rokrajder/strona-z-memami.git)
+git clone https://github.com/rokrajder/strona-z-memami.git
