@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Memów</title>
+    <style>
+        body {
+            background-color: #1a1e29;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            background-color: #12141c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .form-section {
+            width: 300px;
+            margin-right: 20px;
+        }
+        .preview-section {
+            width: 400px;
+            height: 400px;
+            background-color: #252a37;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #3a3f50;
+            background-color: #252a37;
+            color: white;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3b5998;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #4c70ba;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-section">
+        <h2>Wygeneruj Swojego mema</h2>
+        <form action="/" method="POST">
+            <label for="meme">Wybierz mema</label>
+            <select name="meme" id="meme">
+                <option value="szablon1.jpg">Wybierz mema</option>
+                <option value="piesel.jpg">Pieseł</option>
+                <option value="drake.jpg">Drake</option>
+            </select>
+
+            <label for="top_text">Wprowadź górny tekst</label>
+            <input type="text" name="top_text" id="top_text" placeholder="górny tekst">
+
+            <label for="bottom_text">Wpisz tutaj dolny tekst</label>
+            <input type="text" name="bottom_text" id="bottom_text" placeholder="dolny tekst">
+
+            <label for="color">Ustaw kolor tekstu</label>
+            <select name="color" id="color">
+                <option value="white">Biały</option>
+                <option value="black">Czarny</option>
+                <option value="red">Czerwony</option>
+            </select>
+
+            <label for="top_y">Wprowadź położenie głównego tekstu wzdłuż osi Y</label>
+            <input type="number" name="top_y" id="top_y" value="10">
+
+            <label for="bottom_y">Wprowadź położenie dolnego tekstu wzdłuż osi Y</label>
+            <input type="number" name="bottom_y" id="bottom_y" value="350">
+
+            <button type="submit">Wygeneruj mema</button>
+        </form>
+    </div>
+
+    <div class="preview-section">
+        <p style="color: #6a737d;">Podgląd mema pojawi się tutaj</p>
+    </div>
+</div>
+
+</body>
+</html>
